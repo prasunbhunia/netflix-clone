@@ -4,7 +4,7 @@ import { Footer } from '../components';
 function FooterContainer() {
     return (
         <Footer>
-            <p className='title'>Questions? Contact us.</p><div className='break' />
+            <p className='title'>Questions? Contact Us</p><p className='break' />
             <div className='row'>
                 <div className='column'>
                     <a href='./' className='link'>FAQ</a> 
@@ -32,6 +32,7 @@ function FooterContainer() {
                     <a href='./' className='link'>legal  Notices</a> 
                 </div>
             </div>
+            <p className='break' />
             <p className='text'>Netflix India</p>
         </Footer>
     );

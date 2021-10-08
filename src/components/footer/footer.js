@@ -3,7 +3,7 @@ import './styles/footer.scss'
 
 function Footer({children, ...restprops}) {
     return (
-        <div className='container'>
+        <div className='container-footer'>
             {children}
         </div>
     )
