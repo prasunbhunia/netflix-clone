@@ -25,6 +25,7 @@
         .item{
             color: white;
             margin-bottom: 10px;
+            max-width: 815px;
 
             &:first-of-type{
                 margin-top: 3em;
@@ -34,8 +35,7 @@
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;
-                margin-bottom: 1px;
-                font-size: normal;
+                font-size: 20px;
                 background: #303030;
                 padding: 0.8em 1.2em;
                 user-select: none;
@@ -43,7 +43,7 @@
 
                 img{
                     filter: brightness(0) invert(1);
-                    width: 24px;
+                    width: 20px;
 
                     @media(max-width: 600px) {
                         font-size: 16ppx;
@@ -52,7 +52,89 @@
             }
 
             .body{
+                max-height: 1200px;
+                transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+                font-size: 16px;
+                line-height: normal;
+                font-weight: normal;
+                background: #303030;
+                padding: 0.4em 1.2em;
+                user-select: none;
+                
 
+                @media (max-width: 600px){
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                
+            }
+        }
+        .opt-form{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            margin-top: 20px;
+            flex-wrap: wrap;
+
+            @media (max-width: 100px){
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            input{
+                max-width: 450px;
+                width: 100%;
+                border: 0;
+                padding: 10px;
+                height: 65px;
+                box-sizing: border-box;
+
+                @media(max-width: 1000px){
+                    height: 50px;
+                    font-size: 15px;
+                    margin-top: 20px;
+                }
+            }
+            button{
+                display: flex;
+                align-items: center;
+                height: 65px;
+                background: #e50914;
+                color: white;
+                text-transform: uppercase;
+                padding: 0 32px;
+                font-size: 20px;
+                border: 0;
+                cursor: pointer;
+
+                &:hover{
+                    background: #f40612;
+                }
+                @media(max-width: 1000px){
+                    height: 50px;
+                    font-size: 15px;
+                    margin-top: 20px;
+                }
+
+                img{
+                    margin-left: 10px;
+                    filter: brightness(0) invert(1);
+                    width: 20px;
+
+                    @media(max-width: 1000px){
+                        width: 16px;
+                    }
+                }
+            }
+            p{
+                font-size: 19.2px;
+                color: white;
+                text-align: center;
+
+                @media(max-width: 600px){
+                    font-size: 16px;
+                    line-height: 22px;
+                }
             }
         }
     }
