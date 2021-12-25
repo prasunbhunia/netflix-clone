@@ -1,16 +1,22 @@
-import React from 'react'
+import React from 'react';
 import JumbotronContainer from '../containers/jumbotronContainer';
 import FooterContainer from '../containers/footerContainer';
 import FaqsContainer from '../containers/faqsContainer';
+import HeaderContainer from '../containers/headerContainer';
+import { Features, OptForm } from '../components';
 
-function Home() {
+function home() {
     return (
         <>
+            <HeaderContainer>
+                <Features><OptForm/></Features>
+            </HeaderContainer>
             <JumbotronContainer />
             <FaqsContainer />
-            <FooterContainer />     
+            <FooterContainer />
         </>
+                 
     )
 }
  
- export default Home;
+ export default home;
