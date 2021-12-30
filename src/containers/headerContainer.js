@@ -8,7 +8,7 @@ function HeaderContainer({children}) {
     return (
         <Header>
             <div className='container-header'>
-                <img className='Logo' to={Route.Home} src={logo} alt="Netflix" />
+                <Link to={Route.Home}><img className='Logo' src={logo} alt="Netflix" /></Link>
                 <Link className='buttonLink' to={Route.SignIn}>Sign In</Link>
             </div>
             {children}

@@ -7,7 +7,6 @@ function Features({children}) {
         <div className='feature-container'>
             <h1 className='title'>Unlimited films, TV programmes and more.</h1>
             <h2 className='subtitle'>Watch Anywhere. Cancel Anytime</h2>
-
             {children}
         </div>
     )
