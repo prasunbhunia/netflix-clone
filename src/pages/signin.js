@@ -45,7 +45,7 @@ function Signin() {
             }
             <form className='base' onSubmit={handleSignIn} method='POST' >
                 <input placeholder='Email Address' value={emailAddress} onChange={({ target}) => setEmailAddress(target.value)} />
-                <input type='password' placeholder='Password' autocomplete='off' value={password} onChange={({ target }) => setPassword(target.value)} />
+                <input type='password' placeholder='Password' autoComplete='off' value={password} onChange={({ target }) => setPassword(target.value)} />
                 <button disabled={isInvalid} type='submit'>Sign In</button>
             </form>
             <p className='text'>New to Netflix <Link className='link' to={Routes.SignUp}>Sign up now.</Link></p>

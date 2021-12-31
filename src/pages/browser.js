@@ -1,11 +1,11 @@
 import React from 'react'
 
-function browser() {
+function Browser() {
     return (
         <div>
-            
+            <h1>hello From the Browser</h1>
         </div>
     )
 }
 
-export default browser
+export default Browser

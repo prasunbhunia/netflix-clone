@@ -23,7 +23,7 @@ function Signup() {
     const handleSignIn = (event) => {
         event.preventDefault();
 
-        // firebase work here!
+        //NOTE: firebase work here!
         firebase.auth().createUserWithEmailAndPassword(emailAddress, password)
         .then((result) => {
             result.user.updateProfile({
@@ -32,7 +32,7 @@ function Signup() {
             })
         })
         .then(() => {
-            // push to browser page
+            //NOTE: push to browser page
             history.push(Routes.Browser);
         })
         .catch((error) => {
@@ -53,8 +53,8 @@ function Signup() {
             }
             <form className='base' onSubmit={handleSignIn} method='POST' >
                 <input placeholder='First Name' value={firstName} onChange={({ target}) => setFirstName(target.value)}></input>
-                <input placeholder='Email Address' value={emailAddress} onChange={({ target}) => setEmailAddress(target.value)} />
-                <input type='password' placeholder='Password' autocomplete='off' value={password} onChange={({ target }) => setPassword(target.value)} />
+                <input placeholder='Email Address' autoComplete='off' value={emailAddress} onChange={({ target}) => setEmailAddress(target.value)} />
+                <input type='password' placeholder='Password' autoComplete="off" value={password} onChange={({ target }) => setPassword(target.value)} />
                 <button disabled={isInvalid} type='submit'>Sign Up</button>
             </form>
             <p className='text'>Already a user? <Link className='link' to={Routes.SignIn}>Sign in now.</Link></p>
