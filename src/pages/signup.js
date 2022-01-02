@@ -27,7 +27,7 @@ function Signup() {
         firebase.auth().createUserWithEmailAndPassword(emailAddress, password)
         .then((result) => {
             result.user.updateProfile({
-                dispalyName: firstName,
+                displayName: firstName,
                 photoURL: Math.floor(Math.random() *  5) + 1,
             })
         })
@@ -45,7 +45,7 @@ function Signup() {
 
     return (
         <>
-        <HeaderContainer>
+        <HeaderContainer buttonTitle='Sign In' backgroundUrl='url("../images/misc/home-bg.jpg")' >
         <div className='signup-container'>
             <h1 className='title'>Sign Up</h1>
             { error && 

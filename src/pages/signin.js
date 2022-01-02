@@ -37,7 +37,7 @@ function Signin() {
 
     return (
         <>
-        <HeaderContainer>
+        <HeaderContainer buttonTitle='Sign Up' backgroundUrl='url("../images/misc/home-bg.jpg")' >
         <div className='signin-container'>
             <h1 className='title'>Sign In</h1>
             { error && 

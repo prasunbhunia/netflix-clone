@@ -8,7 +8,7 @@ import { Features, OptForm } from '../components';
 function home() {
     return (
         <>
-            <HeaderContainer>
+            <HeaderContainer buttonTitle='Sign In' backgroundUrl='url("../images/misc/home-bg.jpg")' >
                 <Features><OptForm/></Features>
             </HeaderContainer>
             <JumbotronContainer />

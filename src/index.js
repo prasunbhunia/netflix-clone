@@ -9,12 +9,12 @@ import './global-styles.scss';
 import 'normalize.css';
 
 ReactDOM.render(
-<>
-<FirebaseContext.Provider value={{ firebase }}>
-    <App />
-</FirebaseContext.Provider>
-</>, 
-document.getElementById('root')
+    <>
+    <FirebaseContext.Provider value={{ firebase }}>
+        <App />
+    </FirebaseContext.Provider>
+    </>, 
+    document.getElementById('root')
 );
 
 

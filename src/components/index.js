@@ -4,3 +4,5 @@ export { default as Accordion } from './accordion/accordion';
 export { default as Header } from './header/header';
 export { default as OptForm } from './opt-form/opt-from';
 export { default as Features } from './features/features';
+export { default as Profiles } from './profiles/profiles';
+export { default as Loading } from './loading/loading';

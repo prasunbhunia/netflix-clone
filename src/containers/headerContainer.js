@@ -4,12 +4,14 @@ import { Header } from '../components';
 import * as Route from '../constants/routes';
 import logo from '../logo.svg';
 
-function HeaderContainer({children}) {
+function HeaderContainer({children, buttonTitle, backgroundUrl}) {
     return (
-        <Header>
+        <Header backgroundUrl={backgroundUrl}>
             <div className='container-header'>
                 <Link to={Route.Home}><img className='Logo' src={logo} alt="Netflix" /></Link>
-                <Link className='buttonLink' to={Route.SignIn}>Sign In</Link>
+                {
+                    buttonTitle && <Link className='buttonLink' to={Route.SignIn}>{buttonTitle}</Link>
+                }
             </div>
             {children}
         </Header>

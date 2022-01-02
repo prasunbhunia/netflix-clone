@@ -18,8 +18,8 @@ function useAuthListener() {
         });
 
         return () => listener();
-    }, []);
-    return {user };
+    });
+    return { user };
 }
 
 export default useAuthListener;
