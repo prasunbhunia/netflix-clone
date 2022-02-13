@@ -15,7 +15,7 @@ function useAuthListener() {
                 localStorage.removeItem('authUser');
                 setUser(null);
             }
-        });
+        },[]);
 
         return () => listener();
     });

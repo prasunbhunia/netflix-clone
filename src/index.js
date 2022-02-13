@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 
-import App from './app';
+import App from './App';
 import { firebase } from './components/lib/firebase';
 import FirebaseContext from './context/firebase';
 
