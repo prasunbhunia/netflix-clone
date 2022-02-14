@@ -7,7 +7,6 @@ import logo from '../logo.svg';
 
 const Search = ({searchItem, setSearchItem}) => {
   const [searchActive, setSearchActive] = useState(false)
-  console.log(searchActive);
   return(
     <div className='header-search'>
       <button className='search-icon'  onClick={() => setSearchActive((searchActive) => !searchActive )}>
@@ -17,7 +16,7 @@ const Search = ({searchItem, setSearchItem}) => {
     </div>
   );
 }
-function HeaderContainer({ children, buttonTitle, backgroundUrl, Group, profile }) {
+function HeaderContainer({ children, buttonTitle, backgroundUrl, Group, profile, setCategory }) {
   const { firebase } = useContext(FirebaseContext);
   const [searchItem, setSearchItem] = useState('')
   return (
@@ -28,8 +27,8 @@ function HeaderContainer({ children, buttonTitle, backgroundUrl, Group, profile 
           buttonTitle && <Link className='buttonLink' to={Route.SignIn}>{buttonTitle}</Link>}
         {
           Group && <div className='Group'>
-            <Link><p>Series</p></Link>
-            <Link><p>Flims</p></Link>
+            <Link onClick={() => setCategory('series')}><p>Series</p></Link>
+            <Link onClick={() => setCategory('films')}><p>Flims</p></Link>
             <Search searchItem={searchItem} setSearchItem={setSearchItem}/>
             <div className='headerProfile'>
               <button className='picture' style={{ backgroundImage: `url("../images/users/${profile.photoURL}.png")` }} />
