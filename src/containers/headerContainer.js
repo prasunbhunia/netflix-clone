@@ -1,24 +1,15 @@
-import React,{ useContext, useState} from 'react';
+
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components';
 import * as Route from '../constants/routes';
 import FirebaseContext from '../context/firebase';
 import logo from '../logo.svg';
 
-const Search = ({searchItem, setSearchItem}) => {
-  const [searchActive, setSearchActive] = useState(false)
-  return(
-    <div className='header-search'>
-      <button className='search-icon'  onClick={() => setSearchActive((searchActive) => !searchActive )}>
-        <img src="/images/icons/search.png" alt="Search" />
-      </button>
-      <input className={`search-input ${searchActive === true ? 'active' : ''}`} onChange={({target}) => setSearchItem(target.value)} value={searchItem} placeholder='Search films and movies' />
-    </div>
-  );
-}
-function HeaderContainer({ children, buttonTitle, backgroundUrl, Group, profile, setCategory }) {
+function HeaderContainer({ children, buttonTitle, backgroundUrl, Group, profile, setCategory, searchItem, setSearchItem }) {
   const { firebase } = useContext(FirebaseContext);
-  const [searchItem, setSearchItem] = useState('')
+  const [searchActive, setSearchActive] = useState(false)
+
   return (
     <Header backgroundUrl={backgroundUrl}>
       <div className='container-header'>
@@ -29,7 +20,12 @@ function HeaderContainer({ children, buttonTitle, backgroundUrl, Group, profile,
           Group && <div className='Group'>
             <Link onClick={() => setCategory('series')}><p>Series</p></Link>
             <Link onClick={() => setCategory('films')}><p>Flims</p></Link>
-            <Search searchItem={searchItem} setSearchItem={setSearchItem}/>
+            <div className='header-search'>
+              <button className='search-icon' onClick={() => setSearchActive((searchActive) => !searchActive)}>
+                <img src="/images/icons/search.png" alt="Search" />
+              </button>
+              <input className={`search-input ${searchActive === true ? 'active' : ''}`} onChange={({ target }) => setSearchItem(target.value)} value={searchItem} placeholder='Search films and movies' />
+            </div>
             <div className='headerProfile'>
               <button className='picture' style={{ backgroundImage: `url("../images/users/${profile.photoURL}.png")` }} />
               <div className='headerDropdown'>
